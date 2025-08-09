@@ -1,32 +1,67 @@
 let currentLang='de';
 const dict={
-de:{title:'Rechtsanwalt Flah Haji',subtitle:'Beratung und Vertretung in Arbeitsrecht, Strafrecht und Familienrecht',heroTitle:'Klare Hilfe. Schnell erreichbar.',heroLine:'Deutsch & Arabisch - Dortmund Zentrum - Mo-Fr 8-16 Uhr',ctaCall:'Jetzt anrufen',ctaMsg:'Nachricht senden',arbeitsrecht:'Arbeitsrecht',arbeitsrechtText:'Kuendigungsschutz, Abfindung, Aufhebungsvertrag.',strafrecht:'Strafrecht',strafrechtText:'Vorladung, Durchsuchung, Haft - diskret und stark.',familienrecht:'Familienrecht',familienrechtText:'Scheidung, Unterhalt, Sorgerecht.',weitere:'Weitere Rechtsgebiete auf Anfrage',weitereText:'Sprechen Sie mich an - ich pruefe Ihr Anliegen individuell und ehrlich.',kontakt:'Kontakt',hours:'Oeffnungszeiten: Montag bis Freitag 8 bis 16 Uhr',address:'Hoher Wall 2a, 44137 Dortmund',impressum:'Impressum',datenschutz:'Datenschutzerklaerung'},
-ar:{title:'المحامي فلاح حاجي',subtitle:'استشارات وتمثيل في قانون العمل والجنائي والأسرة',heroTitle:'مساعدة واضحة. تواصل سريع.',heroLine:'الألمانية والعربية - مركز دورتموند - من الاثنين إلى الجمعة 8-16',ctaCall:'اتصل الآن',ctaMsg:'أرسل رسالة',arbeitsrecht:'قانون العمل',arbeitsrechtText:'حماية من الفصل، تعويضات، إنهاء بالتراضي.',strafrecht:'القانون الجنائي',strafrechtText:'استدعاء، تفتيش، توقيف - دفاع فعال وسري.',familienrecht:'قانون الأسرة',familienrechtText:'الطلاق، النفقة، الحضانة.',weitere:'مجالات قانونية أخرى عند الطلب',weitereText:'تواصلوا معي - سأدرس قضيتكم بدقة وشفافية.',kontakt:'الاتصال',hours:'ساعات العمل: من الاثنين إلى الجمعة، 8 صباحًا حتى 4 مساءً',address:'هوهر فال ٢أ، ٤٤١٣٧ دورتموند',impressum:'بيانات النشر',datenschutz:'سياسة الخصوصية'}
+  de:{
+    brandTitle:'Rechtsanwalt Flah Haji',
+    brandSub:'Arbeitsrecht · Strafrecht · Familienrecht',
+    heroTitle:'Klare Hilfe. Schnell erreichbar.',
+    heroLine:'Deutsch & Arabisch · Dortmund Zentrum · Mo–Fr 8–16 Uhr',
+    navAreas:'Rechtsgebiete',
+    navAbout:'Flah Haji',
+    ctaAreas:'Rechtsgebiete',
+    ctaAbout:'Flah Haji',
+    strafrechtH:'Strafrecht',
+    strafrechtT:'Engagierte Strafverteidigung vom ersten Ermittlungsansatz bis zur Hauptverhandlung. Ich sichere Akteneinsicht, wahre Ihre Rechte im Ermittlungsverfahren und vertrete Sie vor Gericht – diskret, konsequent und mit klarer Strategie.',
+    arbeitsrechtH:'Arbeitsrecht',
+    arbeitsrechtT:'Kompetente Vertretung bei Kündigung, Lohnansprüchen und Abfindungsverhandlungen. Ich prüfe Fristen, verhandle mit Augenmaß und setze berechtigte Ansprüche – von der Kündigungsschutzklage bis zur einvernehmlichen Lösung.',
+    familienrechtH:'Familienrecht',
+    familienrechtT:'Rechtssichere Begleitung in Trennungs- und Unterhaltsverfahren. Ich wahre Ihre Interessen bei Sorgerecht, Umgang und Vermögensauseinandersetzung – mit der nötigen Sensibilität und Klarheit.',
+    zivilrechtH:'Allgemeines Zivilrecht',
+    zivilrechtT:'Verträge, Schadensersatz, Forderungsmanagement: Ich prüfe Ansprüche, gestalte Vereinbarungen und setze Forderungen effizient durch – außergerichtlich und vor Gericht.',
+  },
+  ar:{
+    brandTitle:'المحامي فلاح حاجي',
+    brandSub:'قانون العمل · الجنائي · الأسرة',
+    heroTitle:'مساعدة واضحة. تواصل سريع.',
+    heroLine:'الألمانية والعربية · وسط دورتموند · من الإثنين إلى الجمعة 8–16',
+    navAreas:'المجالات القانونية',
+    navAbout:'فلاح حاجي',
+    ctaAreas:'المجالات القانونية',
+    ctaAbout:'فلاح حاجي',
+    strafrechtH:'القانون الجنائي',
+    strafrechtT:'دفاع ملتزم من أول إجراء تحقيقي حتى جلسة المحاكمة. أحصل على الاطلاع على الملف وأحمي حقوقكم وأمثلكم أمام المحكمة بسرية وحزم وخطة واضحة.',
+    arbeitsrechtH:'قانون العمل',
+    arbeitsrechtT:'تمثيل مهني في الفصل والمطالبات بالأجور والتفاوض على التعويض. أراجع المواعيد وأتفاوض بميزان وتطبيق الحقوق من دعوى الحماية من الفصل حتى الحل التوافقي.',
+    familienrechtH:'قانون الأسرة',
+    familienrechtT:'مرافقة قانونية مضمونة في قضايا الطلاق والنفقة. أحمي مصالحكم في الحضانة والزيارة وتقسيم الممتلكات – بوضوح وحساسية.',
+    zivilrechtH:'القانون المدني العام',
+    zivilrechtT:'العقود والتعويضات وإدارة المطالبات: أراجع الحقوق وأعد الاتفاقات وأنفذ المطالبات بفعالية داخل وخارج المحكمة.',
+  }
 };
-function setLang(lang){
-  currentLang=lang; const t=dict[lang];
-  document.documentElement.classList.toggle('rtl',lang==='ar');
-  document.getElementById('title').textContent=t.title;
-  document.getElementById('subtitle').textContent=t.subtitle;
+
+function applyLang(){
+  const t=dict[currentLang];
+  document.getElementById('brand-title').textContent=t.brandTitle;
+  document.getElementById('brand-sub').textContent=t.brandSub;
   document.getElementById('hero-title').textContent=t.heroTitle;
   document.getElementById('hero-line').textContent=t.heroLine;
-  document.getElementById('cta-call').textContent=t.ctaCall;
-  document.getElementById('cta-msg').textContent=t.ctaMsg;
-  document.getElementById('sec-arbeitsrecht').textContent=t.arbeitsrecht;
-  document.getElementById('txt-arbeitsrecht').textContent=t.arbeitsrechtText;
-  document.getElementById('sec-strafrecht').textContent=t.strafrecht;
-  document.getElementById('txt-strafrecht').textContent=t.strafrechtText;
-  document.getElementById('sec-familienrecht').textContent=t.familienrecht;
-  document.getElementById('txt-familienrecht').textContent=t.familienrechtText;
-  document.getElementById('sec-weitere').textContent=t.weitere;
-  document.getElementById('txt-weitere').textContent=t.weitereText;
-  document.getElementById('sec-kontakt').textContent=t.kontakt;
-  document.getElementById('hours').textContent=t.hours;
-  document.getElementById('address').textContent=t.address;
+  document.getElementById('nav-areas').textContent=t.navAreas;
+  document.getElementById('nav-about').textContent=t.navAbout;
+  document.getElementById('cta-areas').textContent=t.ctaAreas;
+  document.getElementById('cta-about').textContent=t.ctaAbout;
+  document.getElementById('sec-strafrecht').textContent=t.strafrechtH;
+  document.getElementById('txt-strafrecht').textContent=t.strafrechtT;
+  document.getElementById('sec-arbeitsrecht').textContent=t.arbeitsrechtH;
+  document.getElementById('txt-arbeitsrecht').textContent=t.arbeitsrechtT;
+  document.getElementById('sec-familienrecht').textContent=t.familienrechtH;
+  document.getElementById('txt-familienrecht').textContent=t.familienrechtT;
+  document.getElementById('sec-zivilrecht').textContent=t.zivilrechtH;
+  document.getElementById('txt-zivilrecht').textContent=t.zivilrechtT;
+  document.documentElement.classList.toggle('rtl', currentLang==='ar');
 }
-document.addEventListener('DOMContentLoaded',()=>{
-  document.getElementById('btn-de').addEventListener('click',()=>setLang('de'));
-  document.getElementById('btn-ar').addEventListener('click',()=>setLang('ar'));
-  setLang('de');
-  const y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();
+
+document.addEventListener('DOMContentLoaded', ()=>{
+  document.getElementById('btn-de').addEventListener('click', ()=>{currentLang='de'; applyLang();});
+  document.getElementById('btn-ar').addEventListener('click', ()=>{currentLang='ar'; applyLang();});
+  document.getElementById('year').textContent = new Date().getFullYear();
+  applyLang();
 });
