@@ -1,103 +1,84 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rechtsanwalt Flah Haji</title>
-  <meta name="description" content="Rechtsanwalt Flah Haji · Arbeitsrecht, Strafrecht, Familienrecht · Dortmund" />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rechtsanwalt Flah Haji - Dortmund</title>
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<header class="container header">
-  <div class="brand">
-    <h1 id="title">Rechtsanwalt Flah Haji</h1>
-    <p id="subtitle">Beratung und Vertretung in Arbeitsrecht, Strafrecht und Familienrecht</p>
-  </div>
-  <div class="lang-switch">
-    <button id="btn-de" aria-label="Deutsch">🇩🇪</button>
-    <button id="btn-ar" aria-label="Arabisch">🇸🇦</button>
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">
+      <span class="logo">⚖️</span>
+      <div>
+        <h1 id="title">Rechtsanwalt Flah Haji</h1>
+        <p id="subtitle">Beratung in Arbeits-, Straf- und Familienrecht</p>
+      </div>
+    </div>
+    <div class="actions">
+      <a class="btn ghost" href="tel:+4923196735350">Anrufen</a>
+      <a class="btn" href="mailto:info@ra-haji.de">Nachricht</a>
+      <button id="btn-de" class="btn small">DE</button>
+      <button id="btn-ar" class="btn small">AR</button>
+    </div>
   </div>
 </header>
-
-<main class="container">
-  <section class="cards">
-    <article class="card">
-      <div class="icon">💼</div>
-      <h2 id="sec-arbeitsrecht">Arbeitsrecht</h2>
-      <p id="txt-arbeitsrecht">Kündigung, Abfindung, Arbeitsvertrag – wir vertreten Ihre Interessen klar und konsequent.</p>
-    </article>
-    <article class="card">
-      <div class="icon">⚖️</div>
-      <h2 id="sec-strafrecht">Strafrecht</h2>
-      <p id="txt-strafrecht">Verteidigung im Ermittlungsverfahren und vor Gericht – diskret und durchsetzungsstark.</p>
-    </article>
-    <article class="card">
-      <div class="icon">👨‍👩‍👧</div>
-      <h2 id="sec-familienrecht">Familienrecht</h2>
-      <p id="txt-familienrecht">Scheidung, Unterhalt, Sorgerecht – kompetente Begleitung in sensiblen Angelegenheiten.</p>
-    </article>
-  </section>
-
-  <section class="block center">
-    <h2 id="sec-weitere">Weitere Rechtsgebiete auf Anfrage</h2>
-    <p id="txt-weitere">Sprechen Sie uns an – wir prüfen Ihr Anliegen individuell und ehrlich.</p>
-  </section>
-
-  <section class="block form">
-    <h2 id="sec-kontakt">Kontaktformular</h2>
-    <form onsubmit="event.preventDefault(); alert(currentLang==='de' ? 'Nachricht gesendet (Demo).' : 'تم إرسال الرسالة (تجريبي)');">
-      <input type="text" id="fld-name" placeholder="Ihr Name" required />
-      <input type="email" id="fld-email" placeholder="Ihre E-Mail-Adresse" required />
-      <textarea id="fld-msg" rows="5" placeholder="Ihr Anliegen" required></textarea>
-      <button id="btn-send" type="submit">Nachricht senden</button>
-    </form>
-  </section>
-
-  <section class="block">
-    <h2 id="sec-standort">Unser Standort</h2>
-    <p id="address" class="center">Hoher Wall 2a, 44137 Dortmund</p>
-    <div class="map-wrap">
-      <iframe
-        title="Kanzlei Standort"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.7398425987583!2d7.4640082!3d51.5141884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b917270fb4580f%3A0x94558930e0b1a899!2sHoher%20Wall%202a%2C%2044137%20Dortmund!5e0!3m2!1sen!2sde!4v1693412345678!5m2!1sen!2sde"
-        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<section class="hero" style="background-image:url('images/hero.webp')">
+  <div class="overlay"></div>
+  <div class="hero-inner">
+    <h2 id="hero-title">Klare Hilfe. Schnell erreichbar.</h2>
+    <p id="hero-line">Deutsch & Arabisch - Dortmund Zentrum - Mo-Fr 8-16 Uhr</p>
+    <div class="cta">
+      <a class="btn xl" href="tel:+4923196735350" id="cta-call">Jetzt anrufen</a>
+      <a class="btn xl ghost" href="#kontakt" id="cta-msg">Nachricht senden</a>
     </div>
-    <div class="hours">
-      <span>🕒</span>
-      <span id="hours">Öffnungszeiten: Montag bis Freitag 8 bis 16 Uhr</span>
+  </div>
+</section>
+<main class="wrap">
+  <section class="grid">
+    <article class="card with-image" style="background-image:url('images/arbeitsrecht.webp')">
+      <div class="card-body">
+        <h3 id="sec-arbeitsrecht">Arbeitsrecht</h3>
+        <p id="txt-arbeitsrecht">Kuendigungsschutz, Abfindung, Aufhebungsvertrag.</p>
+        <a href="#kontakt" class="link" id="cta-arbeitsrecht">Kontakt aufnehmen</a>
+      </div>
+    </article>
+    <article class="card with-image" style="background-image:url('images/strafrecht.webp')">
+      <div class="card-body">
+        <h3 id="sec-strafrecht">Strafrecht</h3>
+        <p id="txt-strafrecht">Vorladung, Durchsuchung, Haft - diskret und stark.</p>
+        <a href="#kontakt" class="link" id="cta-strafrecht">Kontakt aufnehmen</a>
+      </div>
+    </article>
+    <article class="card with-image" style="background-image:url('images/familienrecht.webp')">
+      <div class="card-body">
+        <h3 id="sec-familienrecht">Familienrecht</h3>
+        <p id="txt-familienrecht">Scheidung, Unterhalt, Sorgerecht.</p>
+        <a href="#kontakt" class="link" id="cta-familienrecht">Kontakt aufnehmen</a>
+      </div>
+    </article>
+  </section>
+  <section class="contact" id="kontakt">
+    <div class="contact-img" style="background-image:url('images/kontakt.webp')"></div>
+    <div class="contact-body">
+      <h3 id="sec-kontakt">Kontakt</h3>
+      <p id="address">Hoher Wall 2a, 44137 Dortmund</p>
+      <p class="links">
+        <a href="tel:+4923196735350">Festnetz: 0231 96735350</a> ·
+        <a href="tel:+491728445619">Mobil: 0172 8445619</a> ·
+        <a href="mailto:info@ra-haji.de">info@ra-haji.de</a>
+      </p>
+      <p id="hours">Oeffnungszeiten: Montag bis Freitag 8 bis 16 Uhr</p>
     </div>
   </section>
-
-  <section class="block meta">
-    <h2 id="sec-impressum">Impressum</h2>
-    <p id="responsible">Verantwortlich: Rechtsanwalt Flah Haji, Einzelkanzlei</p>
-    <p class="links">
-      <a href="tel:+4923196735350">Festnetz: 0231 96735350</a> ·
-      <a href="tel:+491728445619">Mobil: 0172 8445619</a> ·
-      <a href="mailto:info@ra-haji.de">E-Mail: info@ra-haji.de</a>
-    </p>
-  </section>
-
-  <section class="block meta">
-    <h2 id="sec-datenschutz">Datenschutzerklärung</h2>
-    <p id="privacy-de">
-      Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Personenbezogene Daten werden gemäß den gesetzlichen
-      Datenschutzvorschriften vertraulich behandelt. Weitere Details entnehmen Sie bitte unserer vollständigen Datenschutzerklärung.
-    </p>
-    <p id="privacy-ar" style="display:none;">
-      نحن نولي أهمية كبيرة لحماية بياناتكم الشخصية. يتم التعامل مع البيانات وفقًا للتشريعات القانونية المتعلقة بالخصوصية.
-      لمزيد من التفاصيل، يرجى الرجوع إلى سياسة الخصوصية الكاملة الخاصة بنا.
-    </p>
+  <section class="map">
+    <iframe title="Kanzlei Standort" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.7398425987583!2d7.4640082!3d51.5141884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b917270fb4580f%3A0x94558930e0b1a899!2sHoher%20Wall%202a%2C%2044137%20Dortmund!5e0!3m2!1sen!2sde!4v1693412345678!5m2!1sen!2sde" loading="lazy"></iframe>
   </section>
 </main>
-
-<footer class="container footer">
-  &copy; <span id="year"></span> Rechtsanwalt Flah Haji · Alle Rechte vorbehalten
+<footer class="footer">
+  <div class="wrap">&copy; <span id="year"></span> Rechtsanwalt Flah Haji</div>
 </footer>
-
 <script src="lang.js"></script>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-</body>
-</html>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body></html>
